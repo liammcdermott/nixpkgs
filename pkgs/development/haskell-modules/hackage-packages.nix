@@ -72895,41 +72895,26 @@ self: {
   ) { };
 
   "amazonka-ses" = callPackage (
-    {
-      mkDerivation,
-      amazonka-core,
-      amazonka-test,
-      base,
-      bytestring,
-      case-insensitive,
-      tasty,
-      tasty-hunit,
-      text,
-      time,
-      unordered-containers,
+    { mkDerivation, amazonka-core, amazonka-test, base, bytestring
+    , case-insensitive, fetchgit, lib, tasty, tasty-hunit, text, time
+    , unordered-containers
     }:
     mkDerivation {
       pname = "amazonka-ses";
       version = "2.0";
-      sha256 = "0pziw21bmsjfj0qn5xrwvyi8jk0z93qmyg81awaic4wanhyij5xx";
-      revision = "1";
-      editedCabalFile = "1qync1wmz2p9dylriadvn5nhr4kdyghgvmnw547zzi13ypxgimbd";
-      libraryHaskellDepends = [
-        amazonka-core
-        base
-      ];
+      src = fetchgit {
+        url = "https://github.com/brendanhay/amazonka";
+        sha256 = "1yi6y63zin3szp4yllxd32jxpdysqw97nqqzicr9sw69fqnm7ycq";
+        rev = "ea8679437dd93d2dea74521285d6260d60cea966";
+        fetchSubmodules = true;
+      };
+      postUnpack = "sourceRoot+=/lib/services/amazonka-ses; echo source root reset to $sourceRoot";
+      libraryHaskellDepends = [ amazonka-core base ];
       testHaskellDepends = [
-        amazonka-core
-        amazonka-test
-        base
-        bytestring
-        case-insensitive
-        tasty
-        tasty-hunit
-        text
-        time
-        unordered-containers
+        amazonka-core amazonka-test base bytestring case-insensitive tasty
+        tasty-hunit text time unordered-containers
       ];
+      homepage = "https://github.com/brendanhay/amazonka";
       description = "Amazon Simple Email Service SDK";
       license = lib.licenses.mpl20;
     }
@@ -73510,41 +73495,26 @@ self: {
   ) { };
 
   "amazonka-sso" = callPackage (
-    {
-      mkDerivation,
-      amazonka-core,
-      amazonka-test,
-      base,
-      bytestring,
-      case-insensitive,
-      tasty,
-      tasty-hunit,
-      text,
-      time,
-      unordered-containers,
+    { mkDerivation, amazonka-core, amazonka-test, base, bytestring
+    , case-insensitive, fetchgit, lib, tasty, tasty-hunit, text, time
+    , unordered-containers
     }:
     mkDerivation {
       pname = "amazonka-sso";
       version = "2.0";
-      sha256 = "0x4g24vr92rqk55vf2v3dwka94p949cvryl1hy3lxcvpqk52v0bi";
-      revision = "1";
-      editedCabalFile = "0kywvrwwb3ig22sm3d1sri4mcjgaaspxv99syq9akhpscqnj7ffz";
-      libraryHaskellDepends = [
-        amazonka-core
-        base
-      ];
+      src = fetchgit {
+        url = "https://github.com/brendanhay/amazonka";
+        sha256 = "1yi6y63zin3szp4yllxd32jxpdysqw97nqqzicr9sw69fqnm7ycq";
+        rev = "ea8679437dd93d2dea74521285d6260d60cea966";
+        fetchSubmodules = true;
+      };
+      postUnpack = "sourceRoot+=/lib/services/amazonka-sso; echo source root reset to $sourceRoot";
+      libraryHaskellDepends = [ amazonka-core base ];
       testHaskellDepends = [
-        amazonka-core
-        amazonka-test
-        base
-        bytestring
-        case-insensitive
-        tasty
-        tasty-hunit
-        text
-        time
-        unordered-containers
+        amazonka-core amazonka-test base bytestring case-insensitive tasty
+        tasty-hunit text time unordered-containers
       ];
+      homepage = "https://github.com/brendanhay/amazonka";
       description = "Amazon Single Sign-On SDK";
       license = lib.licenses.mpl20;
     }
@@ -73715,41 +73685,26 @@ self: {
   ) { };
 
   "amazonka-sts" = callPackage (
-    {
-      mkDerivation,
-      amazonka-core,
-      amazonka-test,
-      base,
-      bytestring,
-      case-insensitive,
-      tasty,
-      tasty-hunit,
-      text,
-      time,
-      unordered-containers,
+    { mkDerivation, amazonka-core, amazonka-test, base, bytestring
+    , case-insensitive, fetchgit, lib, tasty, tasty-hunit, text, time
+    , unordered-containers
     }:
     mkDerivation {
       pname = "amazonka-sts";
       version = "2.0";
-      sha256 = "1bhky6ajxyykz983wi22g0j3pj4xbwiqkjgw6z8hh2pdsgisg6cx";
-      revision = "1";
-      editedCabalFile = "04jxklmsqfk6vzp6c0vgqgishpaqlmfpnlimh1mkl0ny7d36i6cl";
-      libraryHaskellDepends = [
-        amazonka-core
-        base
-      ];
+      src = fetchgit {
+        url = "https://github.com/brendanhay/amazonka";
+        sha256 = "1yi6y63zin3szp4yllxd32jxpdysqw97nqqzicr9sw69fqnm7ycq";
+        rev = "ea8679437dd93d2dea74521285d6260d60cea966";
+        fetchSubmodules = true;
+      };
+      postUnpack = "sourceRoot+=/lib/services/amazonka-sts; echo source root reset to $sourceRoot";
+      libraryHaskellDepends = [ amazonka-core base ];
       testHaskellDepends = [
-        amazonka-core
-        amazonka-test
-        base
-        bytestring
-        case-insensitive
-        tasty
-        tasty-hunit
-        text
-        time
-        unordered-containers
+        amazonka-core amazonka-test base bytestring case-insensitive tasty
+        tasty-hunit text time unordered-containers
       ];
+      homepage = "https://github.com/brendanhay/amazonka";
       description = "Amazon Security Token Service SDK";
       license = lib.licenses.mpl20;
     }

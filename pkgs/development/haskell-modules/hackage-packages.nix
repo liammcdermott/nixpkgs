@@ -63899,9 +63899,13 @@ self: {
     mkDerivation {
       pname = "amazonka-core";
       version = "2.0";
-      sha256 = "1lsd9nzyvwwp7j4kii6fp7n98x1qa6999ggwwia5sa06fgqz39bm";
-      revision = "3";
-      editedCabalFile = "05sfrpwyvb6wkazaw044j2acf3pfq1aahi4mnrpww18xg6i0f1dn";
+      src = fetchgit {
+        url = "https://github.com/brendanhay/amazonka";
+        sha256 = "1yi6y63zin3szp4yllxd32jxpdysqw97nqqzicr9sw69fqnm7ycq";
+        rev = "ea8679437dd93d2dea74521285d6260d60cea966";
+        fetchSubmodules = true;
+      };
+      postUnpack = "sourceRoot+=/lib/amazonka-core; echo source root reset to $sourceRoot";
       libraryHaskellDepends = [
         aeson
         attoparsec

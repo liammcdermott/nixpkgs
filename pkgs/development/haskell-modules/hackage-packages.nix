@@ -63905,7 +63905,7 @@ self: {
         rev = "ea8679437dd93d2dea74521285d6260d60cea966";
         fetchSubmodules = true;
       };
-      postUnpack = "sourceRoot+=/lib/amazonka-core; echo source root reset to $sourceRoot";
+      # postUnpack = "sourceRoot+=/lib/amazonka-core; echo source root reset to $sourceRoot";
       libraryHaskellDepends = [
         aeson
         attoparsec
@@ -72912,7 +72912,7 @@ self: {
         rev = "ea8679437dd93d2dea74521285d6260d60cea966";
         fetchSubmodules = true;
       };
-      postUnpack = "sourceRoot+=/lib/services/amazonka-ses; echo source root reset to $sourceRoot";
+      # postUnpack = "sourceRoot+=/lib/services/amazonka-ses; echo source root reset to $sourceRoot";
       libraryHaskellDepends = [ amazonka-core base ];
       testHaskellDepends = [
         amazonka-core amazonka-test base bytestring case-insensitive tasty
@@ -73512,7 +73512,7 @@ self: {
         rev = "ea8679437dd93d2dea74521285d6260d60cea966";
         fetchSubmodules = true;
       };
-      postUnpack = "sourceRoot+=/lib/services/amazonka-sso; echo source root reset to $sourceRoot";
+      # postUnpack = "sourceRoot+=/lib/services/amazonka-sso; echo source root reset to $sourceRoot";
       libraryHaskellDepends = [ amazonka-core base ];
       testHaskellDepends = [
         amazonka-core amazonka-test base bytestring case-insensitive tasty
@@ -73702,7 +73702,7 @@ self: {
         rev = "ea8679437dd93d2dea74521285d6260d60cea966";
         fetchSubmodules = true;
       };
-      postUnpack = "sourceRoot+=/lib/services/amazonka-sts; echo source root reset to $sourceRoot";
+      # postUnpack = "sourceRoot+=/lib/services/amazonka-sts; echo source root reset to $sourceRoot";
       libraryHaskellDepends = [ amazonka-core base ];
       testHaskellDepends = [
         amazonka-core amazonka-test base bytestring case-insensitive tasty

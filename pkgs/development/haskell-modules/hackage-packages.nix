@@ -63899,7 +63899,7 @@ self: {
     mkDerivation {
       pname = "amazonka-core";
       version = "2.0";
-      src = fetchgit {
+      src = pkgs.fetchgit {
         url = "https://github.com/brendanhay/amazonka";
         sha256 = "1yi6y63zin3szp4yllxd32jxpdysqw97nqqzicr9sw69fqnm7ycq";
         rev = "ea8679437dd93d2dea74521285d6260d60cea966";
@@ -72900,13 +72900,13 @@ self: {
 
   "amazonka-ses" = callPackage (
     { mkDerivation, amazonka-core, amazonka-test, base, bytestring
-    , case-insensitive, fetchgit, lib, tasty, tasty-hunit, text, time
+    , case-insensitive, lib, tasty, tasty-hunit, text, time
     , unordered-containers
     }:
     mkDerivation {
       pname = "amazonka-ses";
       version = "2.0";
-      src = fetchgit {
+      src = pkgs.fetchgit {
         url = "https://github.com/brendanhay/amazonka";
         sha256 = "1yi6y63zin3szp4yllxd32jxpdysqw97nqqzicr9sw69fqnm7ycq";
         rev = "ea8679437dd93d2dea74521285d6260d60cea966";
@@ -73500,13 +73500,13 @@ self: {
 
   "amazonka-sso" = callPackage (
     { mkDerivation, amazonka-core, amazonka-test, base, bytestring
-    , case-insensitive, fetchgit, lib, tasty, tasty-hunit, text, time
+    , case-insensitive, lib, tasty, tasty-hunit, text, time
     , unordered-containers
     }:
     mkDerivation {
       pname = "amazonka-sso";
       version = "2.0";
-      src = fetchgit {
+      src = pkgs.fetchgit {
         url = "https://github.com/brendanhay/amazonka";
         sha256 = "1yi6y63zin3szp4yllxd32jxpdysqw97nqqzicr9sw69fqnm7ycq";
         rev = "ea8679437dd93d2dea74521285d6260d60cea966";
@@ -73690,13 +73690,13 @@ self: {
 
   "amazonka-sts" = callPackage (
     { mkDerivation, amazonka-core, amazonka-test, base, bytestring
-    , case-insensitive, fetchgit, lib, tasty, tasty-hunit, text, time
+    , case-insensitive, lib, tasty, tasty-hunit, text, time
     , unordered-containers
     }:
     mkDerivation {
       pname = "amazonka-sts";
       version = "2.0";
-      src = fetchgit {
+      src = pkgs.fetchgit {
         url = "https://github.com/brendanhay/amazonka";
         sha256 = "1yi6y63zin3szp4yllxd32jxpdysqw97nqqzicr9sw69fqnm7ycq";
         rev = "ea8679437dd93d2dea74521285d6260d60cea966";

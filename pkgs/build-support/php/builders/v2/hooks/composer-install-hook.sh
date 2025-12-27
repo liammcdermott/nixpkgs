@@ -57,6 +57,20 @@ composerInstallBuildHook() {
   cp -r "${composerVendor}/${COMPOSER_VENDOR_DIR}" .
   chmod -R +w "${COMPOSER_VENDOR_DIR}"
 
+  # Restore installer-paths (e.g. Drupal libraries/modules/themes) from the vendor output
+  # so offline composer install does not attempt to re-download them.
+  mapfile -t installer_paths < <(jq -r -c 'try((.extra."installer-paths") | keys[])' composer.json)
+  for installer_path in "${installer_paths[@]}"; do
+    # Remove everything after {$name} placeholder
+    installer_path="${installer_path/\{\$name\}*/}"
+    src_path="${composerVendor}/${installer_path/\{\$name\}*/}"
+    if [[ -d "$src_path" ]]; then
+      mkdir -p "$(dirname "$installer_path")"
+      cp -ar "$src_path" "$installer_path"
+      chmod -R +w "$installer_path" || true
+    fi
+  done
+
   echo -e "\e[32mGenerating optimized autoloader and restoring 'bin' directory...\e[0m"
   COMPOSER_DISABLE_NETWORK=1 composer \
     "${composerFlags[@]}" \

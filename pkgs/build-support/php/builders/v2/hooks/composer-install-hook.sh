@@ -11,6 +11,7 @@ declare -g composerNoScripts
 
 declare -ga composerFlags=()
 
+echo "composerFlags: ${composerFlags[*]}"
 [[ 1 == "${composerNoDev:-1}" ]] && composerFlags+=(--no-dev)
 [[ 1 == "${composerNoPlugins:-1}" ]] && composerFlags+=(--no-plugins)
 [[ 1 == "${composerNoScripts:-1}" ]] && composerFlags+=(--no-scripts)

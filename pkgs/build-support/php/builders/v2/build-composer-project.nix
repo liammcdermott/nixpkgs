@@ -30,6 +30,9 @@ let
     }@args:
     {
       inherit
+        composerNoDev
+        composerNoPlugins
+        composerNoScripts
         patches
         strictDeps
         doCheck
